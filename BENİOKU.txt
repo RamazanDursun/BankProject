@@ -6,4 +6,5 @@ denedim. Veritabanýnda ise procedure'lar, çeþitli sorgulama teknikleri, hýzlý so
 bizlere en baþtan baþlayarak(ilk öðrendiðim SQL veritabaný  kaydetme uzun uzadýya kodlar vs.. ) öðrettikleri gibi fazla kodlar yazarak denedim. 
 Sonrasýnda kodlarý biraz daha biraz daha azaltarak farklý yol arayýþlarý içerisine girdim ve Dapper öðrendim. Sizlere de tavsiye ederim. 
 Proje güzel, benim için eðlenceli ve bol öðrenmeli oldu. 
+Bazý eksikliklerim, fazla yazdýðým yerler vs.. olabilir. Lütfen kusuruma bakmayýn..
 Veritabanýnýn yedeðini paylaþtým..
