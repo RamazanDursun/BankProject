@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BankaDBModelStoreContainer" CdmEntityContainer="BankaDBEntities1">
+    <EntitySetMapping Name="BankaBilgileri">
+      <EntityTypeMapping TypeName="BankaDBModel.BankaBilgileri">
+        <MappingFragment StoreEntitySet="BankaBilgileri">
+          <ScalarProperty Name="BankaID" ColumnName="BankaID" />
+          <ScalarProperty Name="BankaAdi" ColumnName="BankaAdi" />
+          <ScalarProperty Name="BankaKodu" ColumnName="BankaKodu" />
+          <ScalarProperty Name="KaynakPara" ColumnName="KaynakPara" />
+          <ScalarProperty Name="BankaKurulusTarihi" ColumnName="BankaKurulusTarihi" />
+          <ScalarProperty Name="BankanınWebSitesi" ColumnName="BankanınWebSitesi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DovizAlSatİslemleri">
+      <EntityTypeMapping TypeName="BankaDBModel.DovizAlSatİslemleri">
+        <MappingFragment StoreEntitySet="DovizAlSatİslemleri">
+          <ScalarProperty Name="DovizID" ColumnName="DovizID" />
+          <ScalarProperty Name="MusteriTckn" ColumnName="MusteriTckn" />
+          <ScalarProperty Name="DovizCinsi" ColumnName="DovizCinsi" />
+          <ScalarProperty Name="DovizTutari" ColumnName="DovizTutari" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KurucuBilgileri">
+      <EntityTypeMapping TypeName="BankaDBModel.KurucuBilgileri">
+        <MappingFragment StoreEntitySet="KurucuBilgileri">
+          <ScalarProperty Name="KurucuID" ColumnName="KurucuID" />
+          <ScalarProperty Name="TCKN" ColumnName="TCKN" />
+          <ScalarProperty Name="KurucuAdi" ColumnName="KurucuAdi" />
+          <ScalarProperty Name="KurucuSoyadi" ColumnName="KurucuSoyadi" />
+          <ScalarProperty Name="KurucuSifre" ColumnName="KurucuSifre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoginGirisEkrani">
+      <EntityTypeMapping TypeName="BankaDBModel.LoginGirisEkrani">
+        <MappingFragment StoreEntitySet="LoginGirisEkrani">
+          <ScalarProperty Name="KullaniciID" ColumnName="KullaniciID" />
+          <ScalarProperty Name="TCKN" ColumnName="TCKN" />
+          <ScalarProperty Name="Parola" ColumnName="Parola" />
+          <ScalarProperty Name="GirisTarihi" ColumnName="GirisTarihi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Mevduatİslemleri">
+      <EntityTypeMapping TypeName="BankaDBModel.Mevduatİslemleri">
+        <MappingFragment StoreEntitySet="Mevduatİslemleri">
+          <ScalarProperty Name="MevduatID" ColumnName="MevduatID" />
+          <ScalarProperty Name="MusteriTckn" ColumnName="MusteriTckn" />
+          <ScalarProperty Name="Limit" ColumnName="Limit" />
+          <ScalarProperty Name="VadeSuresi" ColumnName="VadeSuresi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MusteriBilgileri">
+      <EntityTypeMapping TypeName="BankaDBModel.MusteriBilgileri">
+        <MappingFragment StoreEntitySet="MusteriBilgileri">
+          <ScalarProperty Name="MusteriID" ColumnName="MusteriID" />
+          <ScalarProperty Name="MusteriAdi" ColumnName="MusteriAdi" />
+          <ScalarProperty Name="MusteriSoyadi" ColumnName="MusteriSoyadi" />
+          <ScalarProperty Name="MusteriTckn" ColumnName="MusteriTckn" />
+          <ScalarProperty Name="MusteriAnneKizlikSoyadi" ColumnName="MusteriAnneKizlikSoyadi" />
+          <ScalarProperty Name="MusteriDogumYeri" ColumnName="MusteriDogumYeri" />
+          <ScalarProperty Name="MusteriDogumTarihi" ColumnName="MusteriDogumTarihi" />
+          <ScalarProperty Name="MusteriTel" ColumnName="MusteriTel" />
+          <ScalarProperty Name="MusteriAdres" ColumnName="MusteriAdres" />
+          <ScalarProperty Name="MusteriSubeAdi" ColumnName="MusteriSubeAdi" />
+          <ScalarProperty Name="MusteriSubeKodu" ColumnName="MusteriSubeKodu" />
+          <ScalarProperty Name="MusteriHesapNo" ColumnName="MusteriHesapNo" />
+          <ScalarProperty Name="MusteriHesapTuru" ColumnName="MusteriHesapTuru" />
+          <ScalarProperty Name="BireyselTicari" ColumnName="BireyselTicari" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PersonelBilgileri">
+      <EntityTypeMapping TypeName="BankaDBModel.PersonelBilgileri">
+        <MappingFragment StoreEntitySet="PersonelBilgileri">
+          <ScalarProperty Name="PersonelID" ColumnName="PersonelID" />
+          <ScalarProperty Name="PersonelAdi" ColumnName="PersonelAdi" />
+          <ScalarProperty Name="PersonelSoyadi" ColumnName="PersonelSoyadi" />
+          <ScalarProperty Name="PersonelTCKN" ColumnName="PersonelTCKN" />
+          <ScalarProperty Name="PersonelMaas" ColumnName="PersonelMaas" />
+          <ScalarProperty Name="PersonelParola" ColumnName="PersonelParola" />
+          <ScalarProperty Name="PersonelTelefon" ColumnName="PersonelTelefon" />
+          <ScalarProperty Name="PersonelAdres" ColumnName="PersonelAdres" />
+          <ScalarProperty Name="PersonelDogumYeri" ColumnName="PersonelDogumYeri" />
+          <ScalarProperty Name="PersonelDogumTarihi" ColumnName="PersonelDogumTarihi" />
+          <ScalarProperty Name="PersonelHakkinda" ColumnName="PersonelHakkinda" />
+          <ScalarProperty Name="CalisanYonetici" ColumnName="CalisanYonetici" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="Listeleme" FunctionName="BankaDBModel.Store.Listeleme" />
+  </EntityContainerMapping>
+</Mapping>

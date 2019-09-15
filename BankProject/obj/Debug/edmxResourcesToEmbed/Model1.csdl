@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BankaDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="BankaBilgileri">
+    <Key>
+      <PropertyRef Name="BankaID" />
+    </Key>
+    <Property Name="BankaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BankaAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="BankaKodu" Type="Int32" Nullable="false" />
+    <Property Name="KaynakPara" Type="Int64" Nullable="false" />
+    <Property Name="BankaKurulusTarihi" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="BankanınWebSitesi" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="DovizAlSatİslemleri">
+    <Key>
+      <PropertyRef Name="DovizID" />
+    </Key>
+    <Property Name="DovizID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MusteriTckn" Type="String" MaxLength="11" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DovizCinsi" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DovizTutari" Type="Int64" Nullable="false" />
+  </EntityType>
+  <EntityType Name="KurucuBilgileri">
+    <Key>
+      <PropertyRef Name="KurucuID" />
+    </Key>
+    <Property Name="KurucuID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TCKN" Type="String" MaxLength="11" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="KurucuAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="KurucuSoyadi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="KurucuSifre" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LoginGirisEkrani">
+    <Key>
+      <PropertyRef Name="KullaniciID" />
+    </Key>
+    <Property Name="KullaniciID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TCKN" Type="String" MaxLength="11" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Parola" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="GirisTarihi" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="Mevduatİslemleri">
+    <Key>
+      <PropertyRef Name="MevduatID" />
+    </Key>
+    <Property Name="MevduatID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MusteriTckn" Type="String" MaxLength="11" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Limit" Type="Int64" Nullable="false" />
+    <Property Name="VadeSuresi" Type="Byte" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MusteriBilgileri">
+    <Key>
+      <PropertyRef Name="MusteriID" />
+    </Key>
+    <Property Name="MusteriID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MusteriAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MusteriSoyadi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MusteriTckn" Type="String" MaxLength="11" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MusteriAnneKizlikSoyadi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MusteriDogumYeri" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MusteriDogumTarihi" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="MusteriTel" Type="String" MaxLength="11" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MusteriAdres" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MusteriSubeAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MusteriSubeKodu" Type="Int16" Nullable="false" />
+    <Property Name="MusteriHesapNo" Type="Int32" Nullable="false" />
+    <Property Name="MusteriHesapTuru" Type="String" MaxLength="11" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="BireyselTicari" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PersonelBilgileri">
+    <Key>
+      <PropertyRef Name="PersonelID" />
+    </Key>
+    <Property Name="PersonelID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PersonelAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PersonelSoyadi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PersonelTCKN" Type="String" MaxLength="11" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PersonelMaas" Type="Int16" Nullable="false" />
+    <Property Name="PersonelParola" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PersonelTelefon" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PersonelAdres" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PersonelDogumYeri" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PersonelDogumTarihi" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="PersonelHakkinda" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="CalisanYonetici" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="BankaDBEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="BankaBilgileri" EntityType="Self.BankaBilgileri" />
+    <EntitySet Name="DovizAlSatİslemleri" EntityType="Self.DovizAlSatİslemleri" />
+    <EntitySet Name="KurucuBilgileri" EntityType="Self.KurucuBilgileri" />
+    <EntitySet Name="LoginGirisEkrani" EntityType="Self.LoginGirisEkrani" />
+    <EntitySet Name="Mevduatİslemleri" EntityType="Self.Mevduatİslemleri" />
+    <EntitySet Name="MusteriBilgileri" EntityType="Self.MusteriBilgileri" />
+    <EntitySet Name="PersonelBilgileri" EntityType="Self.PersonelBilgileri" />
+    <FunctionImport Name="Listeleme" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BankaDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="BankaBilgileri">
+    <Key>
+      <PropertyRef Name="BankaID" />
+    </Key>
+    <Property Name="BankaID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BankaAdi" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="BankaKodu" Type="int" Nullable="false" />
+    <Property Name="KaynakPara" Type="bigint" Nullable="false" />
+    <Property Name="BankaKurulusTarihi" Type="date" Nullable="false" />
+    <Property Name="BankanınWebSitesi" Type="nvarchar" MaxLength="60" />
+  </EntityType>
+  <EntityType Name="DovizAlSatİslemleri">
+    <Key>
+      <PropertyRef Name="DovizID" />
+    </Key>
+    <Property Name="DovizID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MusteriTckn" Type="nvarchar" MaxLength="11" Nullable="false" />
+    <Property Name="DovizCinsi" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="DovizTutari" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="KurucuBilgileri">
+    <Key>
+      <PropertyRef Name="KurucuID" />
+    </Key>
+    <Property Name="KurucuID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TCKN" Type="nvarchar" MaxLength="11" Nullable="false" />
+    <Property Name="KurucuAdi" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="KurucuSoyadi" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="KurucuSifre" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LoginGirisEkrani">
+    <Key>
+      <PropertyRef Name="KullaniciID" />
+    </Key>
+    <Property Name="KullaniciID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TCKN" Type="nvarchar" MaxLength="11" Nullable="false" />
+    <Property Name="Parola" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="GirisTarihi" Type="date" />
+  </EntityType>
+  <EntityType Name="Mevduatİslemleri">
+    <Key>
+      <PropertyRef Name="MevduatID" />
+    </Key>
+    <Property Name="MevduatID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MusteriTckn" Type="nvarchar" MaxLength="11" Nullable="false" />
+    <Property Name="Limit" Type="bigint" Nullable="false" />
+    <Property Name="VadeSuresi" Type="tinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MusteriBilgileri">
+    <Key>
+      <PropertyRef Name="MusteriID" />
+    </Key>
+    <Property Name="MusteriID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MusteriAdi" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="MusteriSoyadi" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="MusteriTckn" Type="nvarchar" MaxLength="11" Nullable="false" />
+    <Property Name="MusteriAnneKizlikSoyadi" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="MusteriDogumYeri" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="MusteriDogumTarihi" Type="date" Nullable="false" />
+    <Property Name="MusteriTel" Type="nvarchar" MaxLength="11" Nullable="false" />
+    <Property Name="MusteriAdres" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="MusteriSubeAdi" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="MusteriSubeKodu" Type="smallint" Nullable="false" />
+    <Property Name="MusteriHesapNo" Type="int" Nullable="false" />
+    <Property Name="MusteriHesapTuru" Type="nvarchar" MaxLength="11" Nullable="false" />
+    <Property Name="BireyselTicari" Type="nvarchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PersonelBilgileri">
+    <Key>
+      <PropertyRef Name="PersonelID" />
+    </Key>
+    <Property Name="PersonelID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PersonelAdi" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="PersonelSoyadi" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="PersonelTCKN" Type="nvarchar" MaxLength="11" Nullable="false" />
+    <Property Name="PersonelMaas" Type="smallint" Nullable="false" />
+    <Property Name="PersonelParola" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="PersonelTelefon" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="PersonelAdres" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="PersonelDogumYeri" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="PersonelDogumTarihi" Type="date" Nullable="false" />
+    <Property Name="PersonelHakkinda" Type="nvarchar" MaxLength="250" />
+    <Property Name="CalisanYonetici" Type="int" Nullable="false" />
+  </EntityType>
+  <Function Name="Listeleme" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <EntityContainer Name="BankaDBModelStoreContainer">
+    <EntitySet Name="BankaBilgileri" EntityType="Self.BankaBilgileri" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DovizAlSatİslemleri" EntityType="Self.DovizAlSatİslemleri" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="KurucuBilgileri" EntityType="Self.KurucuBilgileri" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LoginGirisEkrani" EntityType="Self.LoginGirisEkrani" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Mevduatİslemleri" EntityType="Self.Mevduatİslemleri" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MusteriBilgileri" EntityType="Self.MusteriBilgileri" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PersonelBilgileri" EntityType="Self.PersonelBilgileri" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
