@@ -1,0 +1,8 @@
+Kendimi geliþtirmek için yazdýðým ve tek baþýma yaptýðým bir proje olan BankProject' si kendimi bu alanda geliþtirmemde yeni bilgiler, 
+araþtýrmalar yapmamda da çok faydasý oldu. Farklý projelere baþlayacaðýmdan dolayý, birde bana bu yazýlým iþinde bana destek ve öðretilerde 
+bulunanlarýn dedikleri gibi "bu alanda sürekli okuman ve yazman gerekli". Bende bazen metot kullanmadým(Bazen bir iþi sürekli tekrarladým daha 
+iyi öðrenebilmek için(biliyorum normalde metot kullanmam lazým ama öðrenmek þart :D)), farklý yollardan da çözmek istediðimden deðiþik yollar 
+denedim. Veritabanýnda ise procedure'lar, çeþitli sorgulama teknikleri, hýzlý sorgulama teknikleri, Dapper, gibi þeyler kullandým. Yeri geldi 
+bizlere en baþtan baþlayarak(ilk öðrendiðim SQL veritabaný  kaydetme uzun uzadýya kodlar vs.. ) öðrettikleri gibi fazla kodlar yazarak denedim. 
+Sonrasýnda kodlarý biraz daha biraz daha azaltarak farklý yol arayýþlarý içerisine girdim ve Dapper öðrendim. Sizlere de tavsiye ederim. 
+Proje güzel, benim için eðlenceli ve bol öðrenmeli oldu. 
